@@ -167,41 +167,43 @@
 # c2h.c2display()
 # c2h.phdisplay()
         #Multiple Inheritence
-# class ClassA(object):
-#     def __init__(self):
-#         self.var1 = 1
-#         self.var2 = 2
+# class Father:
+#     def fadisplay(self):
+#         print("father class")
+# class mother:
+#     def momdisplay(self):
+#         print("mother class")
+# class child(Father,mother):
+#     def childdisplay(self):
+#         print("child class ")
+# object = child()
+# object.childdisplay()
+# object.fadisplay()
+# object.momdisplay()    
+        #example 
+class ClassA:
+    def __init__(self):
+        self.var1 = 1
+        self.var2 = 2
+    def methodA(self):
+        self.var1 = self.var1 + self.var2
+        return self.var1
 
-#     def methodA(self):
-#         self.var1 = self.var1 + self.var2
-#         return self.var1
+class ClassB(ClassA):
+    def __init__(self):
+        self.var1 = 2
+        self.var2 = 3
+    def methodb(self):
+        self.var1 = self.var1 + self.var2
+        return self.var1 
+
+object1 = ClassB()
+sum = object1.methodA()
+print(sum)
+print(object1.methodb())
 
 
-# class ClassB(ClassA):
-#     def __init__(self):
-#         self.var1 = 2
-#         self.var2 = 3
-#     def methodb(self):
-        
-#         self.var1 = self.var1 + self.var2
-#         return self.var1
 
-# object1 = ClassB()
-# sum = object1.methodb()
-# print(sum)
-class Father:
-    def fadisplay(self):
-        print("father class")
-class mother:
-    def momdisplay(self):
-        print("mother class")
-class child(Father,mother):
-    def childdisplay(self):
-        print("child class ")
-object = child()
-object.childdisplay()
-object.fadisplay()
-object.momdisplay()
 
 
     
